@@ -1,11 +1,10 @@
 require 'rails_helper'
 
-RSpec.helper "A user visits the home page" do
+RSpec.feature "A user visits the home page" do
   
   scenario "A user sees a link for Home" do
     visit "/"
     expect(page).to have_link("Home")
-
   end
 
   scenario "A user sees a link for Athletes Den" do
