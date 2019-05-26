@@ -62,6 +62,8 @@ guard :rspec, cmd: "bin/rspec" do
 
   watch(rails.view_dirs) { |m| "spec/features/#{m[1]}" }
 
+  watch(%r{^app/views/layout/application.html.erb$}) { "spec/features" }
+
 
   # Capybara features specs
   watch(rails.view_dirs)     { |m| rspec.spec.call("features/#{m[1]}") }

@@ -6,7 +6,7 @@ RSpec.feature "A User Signs In" do
   end
   scenario "A user signs in with valid credentials" do
     visit "/"
-    click_link "Sign in"
+    click_link "Sign In"
     fill_in "Email", with: @user.email
     fill_in "Password", with: @user.password
     click_button "Log in"
